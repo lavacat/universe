@@ -1,0 +1,16 @@
+{
+  "id": "{{drill.framework-name}}",
+  "cpus": {{drill.cpus}},
+  "mem": {{drill.mem}},
+  "ports": [ 0 ],
+  "instances": {{drill.instances}},
+  "cmd": "cd apache-drill-* && sed -i \"s/localhost:2181/{{drill.zk}}/g\" ./conf/drill-override.conf && ./bin/drillbit.sh start"
+
+	"uris": [
+    "http://apache.mesi.com.ar/drill/drill-1.7.0/apache-drill-1.7.0.tar.gz"
+  ]
+
+  "labels": {
+    "DCOS_PACKAGE_FRAMEWORK_NAME": "{{drill.framework-name}}"
+  }
+}

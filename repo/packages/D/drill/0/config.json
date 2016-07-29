@@ -1,0 +1,42 @@
+{
+    "properties": {
+        "drill": {
+            "description": "Drill specific configuration properties",
+            "properties": {
+                "framework-name": {
+                  "description": "Identifier for the cluster.",
+                  "type": "string",
+                  "default": "drill"
+                },
+                "cpus": {
+                    "default": 0.05,
+                    "description": "CPU shares to allocate to each Marathon instance.",
+                    "minimum": 0.0,
+                    "type": "number"
+                },
+                "instances": {
+                    "default": 1,
+                    "description": "Number of Marathon instances to run.",
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "mem": {
+                    "default": 128.0,
+                    "description": "Memory (MB) to allocate to each Marathon task.",
+                    "minimum": 128.0,
+                    "type": "number"
+                },
+                "zk": {
+                  "default": "master.mesos:2181",
+                  "description": "The URL of Zookeeper to be used to persist Drill framework data. The format is a comma-delimited list of hosts like zk://host1:port,host2:port/calico, including the trailing path.",
+                  "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "required": [
+        "drill"
+    ],
+    "type": "object"
+}

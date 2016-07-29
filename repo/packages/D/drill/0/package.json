@@ -1,0 +1,9 @@
+{
+    "packagingVersion": "0.1",
+    "description": "Drill",
+    "framework": false,
+    "name": "drill",
+    "postInstallNotes": "Drill on DCOS successfully installed.",
+    "postUninstallNotes": "Drill on DCOS successfully uninstalled.\n.",
+    "version": "1.7"
+}
